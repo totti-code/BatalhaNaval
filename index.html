@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Batalha Naval</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <h1>⚓ Batalha Naval</h1>
+    <p class="sub">Clique nas casas para atacar. Afunde todos os navios!</p>
+  </header>
+
+  <main class="wrap">
+    <section class="panel">
+      <div class="stats">
+        <div class="stat">
+          <span class="label">Tiros</span>
+          <span id="shots" class="value">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">Acertos</span>
+          <span id="hits" class="value">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">Navios</span>
+          <span id="shipsLeft" class="value">5</span>
+        </div>
+      </div>
+
+      <div id="message" class="message">Boa sorte, comandante!</div>
+
+      <div class="actions">
+        <button id="newGame" class="btn">Novo jogo</button>
+        <button id="reveal" class="btn ghost" title="Só pra teste">Revelar (teste)</button>
+      </div>
+    </section>
+
+    <section class="board-area">
+      <div class="legend">
+        <span class="chip water"></span> Água
+        <span class="chip miss"></span> Erro
+        <span class="chip hit"></span> Acerto
+        <span class="chip sunk"></span> Afundou
+      </div>
+
+      <div id="board" class="board" aria-label="Tabuleiro Batalha Naval"></div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <small>Projeto acadêmico - Batalha Naval</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
