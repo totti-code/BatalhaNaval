@@ -189,3 +189,40 @@ body{
   .wrap{ grid-template-columns: 1fr; }
   .board{ max-width: 100%; }
 }
+/* Peças do navio (aparecem quando acertar) */
+.cell.hit, .cell.sunk{
+  background: rgba(255,183,3,0.18);
+}
+
+.piece{
+  position:absolute;
+  inset: 6px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.92);
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity .15s ease, transform .15s ease;
+}
+
+/* quando acertar, mostra a peça */
+.cell.hit .piece,
+.cell.sunk .piece{
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* formatos (horizontal) */
+.piece.h-mid{ border-radius: 6px; }
+.piece.h-left{ border-radius: 14px 6px 6px 14px; }
+.piece.h-right{ border-radius: 6px 14px 14px 6px; }
+
+/* formatos (vertical) */
+.piece.v-mid{ border-radius: 6px; }
+.piece.v-top{ border-radius: 14px 14px 6px 6px; }
+.piece.v-bottom{ border-radius: 6px 6px 14px 14px; }
+
+/* cor quando afundar */
+.cell.sunk .piece{
+  background: rgba(255,255,255,0.95);
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,0.15);
+}
